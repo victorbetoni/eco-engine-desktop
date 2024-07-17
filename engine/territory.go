@@ -42,3 +42,19 @@ type Territory struct {
 func (t *Territory) IsHQ() bool {
 	return (t.Flags & FLAG_HQ) != 0
 }
+
+func (t *Territory) IsLacking() bool {
+	return (t.Flags & FLAG_LACKING) != 0
+}
+
+func (t *Territory) IsOverflowing() bool {
+	return (t.Flags & FLAG_OVERFLOWING) != 0
+}
+
+func (t *Territory) IsRouteFastest() bool {
+	return (t.Flags & FLAG_ROUTE_FASTEST) != 0
+}
+
+func (t *Territory) IsBorderOpen() bool {
+	return (t.Flags & FLAG_BORDER_OPEN) != 0
+}
